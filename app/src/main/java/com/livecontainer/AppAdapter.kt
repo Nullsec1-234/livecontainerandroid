@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListDiffCallback
 import androidx.recyclerview.widget.RecyclerView
 
 class AppAdapter(private var appList: List<AppAdapter.AppItem>) : RecyclerView.Adapter<AppAdapter.AppViewHolder>() {
@@ -47,22 +45,27 @@ class AppAdapter(private var appList: List<AppAdapter.AppItem>) : RecyclerView.A
 
     override fun onBindViewHolder(holder: AppViewHolder, position: Int) {
         val item = appList[position]
-        holder.icon.setImageResource(item.iconRes)
+
+        // Set icon - display Bitmap directly
+        if (item.icon != null) {
+            holder.icon.setImageBitmap(item.icon)
+        } else {
+            holder.icon.setImageResource(R.drawable.ic_launcher)
+        }
+        
         holder.name.text = item.name
         holder.version.text = item.version
         holder.bundle.text = item.bundle
 
         holder.startBtn.setOnClickListener {
-            // Handle start button click - launch guest app
-            // In real implementation, would use ClassLoaderHelper to load the APK's activity
+            // Handle start button click
         }
     }
 
     data class AppItem(
-        val iconRes: Int,
+        val icon: android.graphics.Bitmap?,   // Changed from iconRes: Int
         val name: String,
         val version: String,
         val bundle: String,
         val packageName: String
     )
-}
