@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSurface"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Meine Apps"
+        app:titleTextColor="@android:color/white"
+        app:layout_scroll="scroll|enterAlways"/>
+
+    <androidx.core.widget.ContentDescriptionContainer
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewMeineApps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Meine Apps"
+                android:textColor="#f5f5f7"
+                android:textSize="47px"
+                android:letterSpacing="-1.7px"
+                android:layout_marginStart="16px"
+                android:layout_marginTop="16px"
+                android:layout_marginEnd="16px"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewApps"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingTop="8px"
+                android:paddingBottom="8px"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:numberOfColumns="2"
+                app:spanCount="2"
+                app:layout_constraintTop_toBottomOf="@id/textViewMeineApps"
+                app:layout_constraintBottom_toTopOf="@id/navBar"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#303033"
+                app:layout_constraintBottom_toTopOf="@id/navBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#191919"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:menu="@menu/bottom_nav_menu"/>
+
+            <FrameLayout
+                android:id="@+id/fabContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16px"
+                android:layout_marginEnd="16px"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:clickable="true"
+                app:focusable="true"
+                app:layout_anchor="@id/navBar"
+                app:layout_anchorGravity="bottom|end"/>
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="12px"
+                android:layout_marginEnd="12px"
+                android:background="#191919"
+                android:border="1px solid #292929"
+                android:borderRadius="50px"
+                android:scaleType="center"
+                android:src="⌕"
+                android:textColor="@android:color/white"/>
+
+            <View
+                android:id="@+id/homeIndicator"
+                android:layout_width="115px"
+                android:layout_height="5px"
+                android:background="#1d1d1f"
+                android:layout_gravity="bottom"
+                android:layout_margin="12px"
+                app:layout_gravity="bottom"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.ContentDescriptionContainer>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

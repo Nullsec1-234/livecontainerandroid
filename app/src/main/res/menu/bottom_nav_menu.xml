@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navQuellen"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Quellen"/>
+    <item
+        android:id="@+id/navApps"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Apps"/>
+    <item
+        android:id="@+id/navTweaks"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Tweaks"/>
+    <item
+        android:id="@+id/navEinstellungen"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Einstellungen"/>
+</menu>

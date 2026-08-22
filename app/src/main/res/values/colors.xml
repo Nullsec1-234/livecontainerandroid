@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color palette matching UI reference -->
+    <color name="black">#000000</color>
+    <color name="darkPrimary">#111111</color>
+    <color name="darkSurface">#191919</color>
+    <color name="darkCard">#1b1b1d</color>
+    <color name="darkMuted">#8d8d93</color>
+    <color name="darkText">#f5f5f7</color>
+    <color name="darkTextSecondary">#e6e6e6</color>
+    <color name="darkTextTertiary">#d0d0d0</color>
+    <color name="darkDivider">#303033</color>
+    <color name="searchBackground">#191919</color>
+    <color name="homeIndicator">#1d1d1f</color>
+
+    <!-- App card backgrounds (consistent dark style) -->
+    <color name="cardSpotify">#06321e</color>
+    <color name="cardHD">#311414</color>
+    <color name="cardKodi">#5f6d73</color>
+    <color name="cardARMS">#06203d</color>
+    <color name="cardYouTube">#805f66</color>
+
+    <!-- Button backgrounds per app -->
+    <color name="btnSpotify">#247846</color>
+    <color name="btnHD">#753535</color>
+    <color name="btnKodi">#c4dce5</color>
+    <color name="btnKodiText">#fff</color>
+    <color name="btnARMS">#0d5d9e</color>
+    <color name="btnYouTube">#f19caf</color>
+
+    <!-- Icon colors -->
+    <color name="spotifyGreen">#1ed760</color>
+    <color name="hdRed">#f21b1b</color>
+    <color name="kodiCyan">#2396ca</color>
+    <color name="armsCyan">#23a9ff</color>
+    <color name="youtubeRed">#ff1237</color>
+</resources>

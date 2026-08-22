@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LiveContainerAndroid</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="title_activity_main">Meine Apps</string>
+
+    <!-- App names and versions from UI reference -->
+    <string name="app_spotify">Spotify</string>
+    <string name="app_version_spotify">9.0.20</string>
+    <string name="app_bundle_spotify">DE36E738-F158-4131-BA3A-A83E10864849</string>
+
+    <string name="app_hd">HD Flix</string>
+    <string name="app_version_hd">2.0</string>
+    <string name="app_bundle_hd">DCAA061-ED70-4956-A663-978F67D6ADD3</string>
+
+    <string name="app_kodi">Kodi</string>
+    <string name="app_version_kodi">21.3</string>
+    <string name="app_bundle_kodi">6F98EBAE-8576-4717-AF81-6F0961AF4D0F</string>
+
+    <string name="app_arms">ARMSX2 iOS</string>
+    <string name="app_version_arms">2.4.1</string>
+    <string name="app_bundle_arms">14F11B27-C705-444A-BE9F-7A8EF17E81FC</string>
+
+    <string name="app_youtube">YouTube</string>
+    <string name="app_version_youtube">20.09.3</string>
+    <string name="app_bundle_youtube">B170E636-CC2E-41B5-9726-3FA8047FFD31</string>
+
+    <string name="start">Starten</string>
+    <string name="count_total">5 Anwendungen insgesamt</string>
+</resources>
